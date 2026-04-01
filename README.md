@@ -1,13 +1,6 @@
 # 🎯 Emoji Tahmin Oyunu
 
 Emojilerden kelime tahmin etme oyunu! Android platformu için Java ve XML ile geliştirilmiş eğlenceli bir mobil uygulama.
-
-<p align="center">
-  <img src="screenshots/gameplay.png" width="250" alt="Oyun Ekranı"/>
-  <img src="screenshots/result.png" width="250" alt="Sonuç Ekranı"/>
-  <img src="screenshots/menu.png" width="250" alt="Ana Menü"/>
-</p>
-
 ---
 
 ## 📖 Proje Hakkında
