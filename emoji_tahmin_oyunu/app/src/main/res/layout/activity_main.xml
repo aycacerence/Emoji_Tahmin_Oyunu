@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_idle"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ==================== OYUN BAŞLIĞI ==================== -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05"
+            android:text="@string/title"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <!-- ==================== GERİ DÖN BUTONU ==================== -->
+        <!-- Button: Oyun sırasında ana menüye dönmek için -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_background"
+            android:fontFamily="sans-serif-medium"
+            android:text="← Ana Menü"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- ==================== SKOR KARTI ==================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-bold"
+                android:gravity="center"
+                android:text="@string/label_score"
+                android:textColor="@color/text_accent"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvStreak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-bold"
+                android:gravity="center"
+                android:text="@string/label_streak"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!-- ==================== IMAGEVIEW — DURUM GÖSTERGESİ ==================== -->
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Durum göstergesi"
+            android:src="@drawable/ic_status_neutral" />
+
+        <!-- ==================== SORU ALANI ==================== -->
+        <TextView
+            android:id="@+id/tvQuestionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/label_ready_text"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Emoji sorusu -->
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/label_ready"
+            android:textSize="52sp" />
+
+        <!-- ==================== KELİME UZUNLUĞU ÇİZGİLERİ ==================== -->
+        <!-- TextView: Her zaman görünür — _ _ _ _ _   _ _ _ _ şeklinde -->
+        <TextView
+            android:id="@+id/tvWordDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Harf sayısı bilgisi -->
+        <TextView
+            android:id="@+id/tvLetterCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!-- İpucu metni -->
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textColor="#FFFFAB40"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- ==================== EDITTEXT — CEVAP GİRİŞİ ==================== -->
+        <EditText
+            android:id="@+id/etAnswer"
+            android:layout_width="280dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_background"
+            android:fontFamily="sans-serif-bold"
+            android:gravity="center"
+            android:hint="@string/hint_answer"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <!-- Geri bildirim mesajı -->
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-bold"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- ==================== BUTONLAR ==================== -->
+        <Button
+            android:id="@+id/btnAnswer"
+            android:layout_width="240dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_rounded_green"
+            android:elevation="6dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="@string/btn_start"
+            android:textColor="@color/btn_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="240dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_rounded_red"
+            android:elevation="6dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="@string/btn_next"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- ==================== AYARLAR KARTI ==================== -->
+        <LinearLayout
+            android:id="@+id/settingsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Spinner: Kategori seçimi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="Kategori:"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/text_primary"
+                    android:popupBackground="@color/bg_idle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#22FFFFFF" />
+
+            <!-- CheckBox: İpucu göster -->
+            <CheckBox
+                android:id="@+id/cbHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/btn_start"
+                android:checked="false"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/label_hint"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#22FFFFFF" />
+
+            <!-- Switch: Zor Mod -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/label_hard_mode"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <Switch
+                    android:id="@+id/switchHardMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:thumbTint="@color/switch_thumb_off"
+                    android:trackTint="@color/switch_track_off" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+</ScrollView>

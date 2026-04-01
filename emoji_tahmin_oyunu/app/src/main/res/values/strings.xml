@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Emoji Tahmin</string>
+    <string name="title">🎯 EMOJİ TAHMİN</string>
+    <string name="subtitle">Emojilerden kelimeyi bul!</string>
+
+    <string name="btn_start">🚀 OYUNU BAŞLAT</string>
+    <string name="btn_answer">✅ CEVAPLA</string>
+    <string name="btn_next">➡️ SONRAKİ SORU</string>
+    <string name="btn_results">🏆 SONUÇLARI GÖR</string>
+    <string name="btn_restart">🔄 YENİDEN OYNA</string>
+    <string name="btn_back">← Ana Menü</string>
+
+    <string name="label_score">Skor: 0 / 0</string>
+    <string name="label_streak">Seri: 0 🔥</string>
+    <string name="label_ready">🎮</string>
+    <string name="label_ready_text">Kategori seç ve başla!</string>
+    <string name="hint_answer">Cevabını yaz…</string>
+    <string name="label_hard_mode">Zor Mod 🔥</string>
+    <string name="label_hint">💡 İlk Harfleri Göster</string>
+
+    <string name="toast_correct">Doğru! 🎉</string>
+    <string name="toast_wrong">Yanlış! 😅</string>
+    <string name="toast_empty">Bir cevap yaz!</string>
+    <string name="toast_game_start">Oyun başlıyor! 🎮</string>
+    <string name="toast_game_over">Oyun bitti! 🏆</string>
+    <string name="toast_hard_on">Zor Mod AÇIK — ipucu kısıtlı! 🔥</string>
+    <string name="toast_hard_off">Normal Mod — ipucu serbest ✌️</string>
+    <string name="toast_back">Oyundan çıkıldı</string>
+
+    <string-array name="categories">
+        <item>🎬 Film ve Dizi</item>
+        <item>🌍 Ülkeler</item>
+        <item>🎭 Meslekler</item>
+        <item>🐾 Hayvanlar</item>
+    </string-array>
+</resources>

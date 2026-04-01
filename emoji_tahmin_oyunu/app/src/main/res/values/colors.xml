@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="purple_500">#FF6750A4</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Game state colors -->
+    <color name="bg_idle">#FF1A1A2E</color>        <!-- Deep dark blue - idle/start -->
+    <color name="bg_waiting">#FFB71C1C</color>      <!-- Rich red - waiting -->
+    <color name="bg_ready">#FF1B5E20</color>        <!-- Rich green - tap now -->
+    <color name="bg_result">#FF0D47A1</color>       <!-- Deep blue - result -->
+    <color name="bg_fail">#FFBF360C</color>         <!-- Deep orange - too early -->
+
+    <!-- UI element colors -->
+    <color name="card_bg">#33FFFFFF</color>          <!-- Semi-transparent white -->
+    <color name="card_bg_dark">#44000000</color>     <!-- Semi-transparent black -->
+    <color name="text_primary">#FFFFFFFF</color>     <!-- White -->
+    <color name="text_secondary">#B3FFFFFF</color>   <!-- 70% white -->
+    <color name="text_accent">#FFFFAB40</color>      <!-- Amber accent -->
+
+    <!-- Button colors -->
+    <color name="btn_start">#FF00E676</color>        <!-- Bright green -->
+    <color name="btn_start_dark">#FF00C853</color>   <!-- Darker green -->
+    <color name="btn_reset">#FFFF5252</color>        <!-- Bright red -->
+    <color name="btn_text">#FF1A1A2E</color>         <!-- Dark text on buttons -->
+
+    <!-- Switch colors -->
+    <color name="switch_track_on">#FFFF6D00</color>
+    <color name="switch_thumb_on">#FFFFAB40</color>
+    <color name="switch_track_off">#66FFFFFF</color>
+    <color name="switch_thumb_off">#FFBDBDBD</color>
+
+    <!-- Standard Android colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
